@@ -21,13 +21,12 @@ export function MainNav({ items, children }) {
   const { data: session } = useSession();
   const [showMobileMenu, setShowMobileMenu] = useState(false);
   const [loginSession, setLoginSession] = useState(null);
-console.log('session', session)
+
 
 if(session?.error === 'RefreshAccessTokenError'){
   redirect('/login')
 }
   useEffect(() => {
-    console.log("test");
     setLoginSession(session);
   }, [session]);
 

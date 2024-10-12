@@ -24,7 +24,6 @@ export function MobileNav({ items, children }) {
     redirect('/login')
   }
   useEffect(() => {
-    console.log("test");
     setLoginSession(session);
   }, [session]);
 

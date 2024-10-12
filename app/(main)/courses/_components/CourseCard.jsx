@@ -1,10 +1,12 @@
 import { CourseProgress } from '@/components/course-progress'
+import { EnrollCourse } from '@/components/enroll-course'
 import { Button } from '@/components/ui/button'
 import { formatPrice } from '@/lib/formatPrice'
 import { ArrowRight, BookOpen } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+
 
 const CourseCard = ({course}) => {
   return (
@@ -45,13 +47,7 @@ const CourseCard = ({course}) => {
                           {formatPrice(49)}
                         </p>
 
-                        <Button
-                          variant="ghost"
-                          className="text-xs text-sky-700 h-7 gap-1"
-                        >
-                          Enroll
-                          <ArrowRight className="w-3" />
-                        </Button>
+                        <EnrollCourse asLink={true}/>
                       </div>
                     </div>
                   </div>
